@@ -42,8 +42,13 @@ export const NewsListView: FC<NewsListViewTypes> = props => {
           data={data}
           keyExtractor={item => item.id}
           renderItem={renderItems}
+          showsVerticalScrollIndicator={false}
         />
       )}
     </>
   );
+};
+
+const Line = () => {
+  return <View style={{ borderColor: '#bf3f27' }}></View>;
 };
