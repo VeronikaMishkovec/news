@@ -3,6 +3,7 @@ import { List } from '../type';
 
 const initialState = {
   list: [],
+  loading: true,
 };
 
 export const newsList = (
@@ -13,7 +14,7 @@ export const newsList = (
     case GET_NEWS_LIST:
       return { ...state };
     case SET_NEWS_LIST:
-      return { ...state, list: action.payload.data.results };
+      return { ...state, list: action.payload.data.results, loading: false };
     default:
       return { ...state };
   }

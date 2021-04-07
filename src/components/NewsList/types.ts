@@ -1,3 +1,5 @@
+import { TextStyle } from "react-native";
+
 export type NewsListTypes = {
   title: string;
   abstract: string;
@@ -13,12 +15,18 @@ export type NewsListTypes = {
   id: string;
 };
 
+export type NewsListStylesTypes = {
+  container: TextStyle
+}
+
 export type NewsListViewTypes = {
   data: NewsListTypes[];
+  loading: boolean;
 };
 
 export type RootState = {
   newsList: {
     list: [];
+    loading: boolean;
   };
 };

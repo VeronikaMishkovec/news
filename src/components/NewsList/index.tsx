@@ -9,10 +9,11 @@ export const NewsList = () => {
   const dispatch = useDispatch();
 
   const newsList = useSelector((state: RootState) => state.newsList.list);
+  const loading = useSelector((state: RootState) => state.newsList.loading);
 
   useEffect(() => {
     dispatch(getNewsList());
   }, []);
 
-  return <NewsListView data={newsList} />;
+  return <NewsListView data={newsList} loading={loading}/>;
 };

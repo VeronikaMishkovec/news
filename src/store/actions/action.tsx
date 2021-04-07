@@ -5,9 +5,10 @@ export const getNewsList = () => ({
   type: GET_NEWS_LIST,
 });
 
-export const setNewsList = (list: {}) => {
+export const setNewsList = (list: {}, loading: boolean) => {
   return {
     list,
+    loading,
     type: SET_NEWS_LIST,
   };
 };

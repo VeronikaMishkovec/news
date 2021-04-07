@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 import {
   COLOR,
   CONTAINER_PADDING,
@@ -27,12 +27,12 @@ export const styles = StyleSheet.create<NewsCardStylesTypes>({
   subtitle: {
     fontFamily: FONT.REGULAR,
     fontSize: FONT_SIZE.TEXT,
-    marginBottom: PADDING,
+    marginBottom: Platform.OS === 'android' ? 0 : PADDING,
   },
   text: {
     color: COLOR.BTN,
     fontFamily: FONT.REGULAR,
-    marginBottom: PADDING,
+    marginBottom: Platform.OS === 'android' ? 0 : PADDING,
   },
   textContainer: {
     paddingHorizontal: PADDING,
@@ -45,6 +45,6 @@ export const styles = StyleSheet.create<NewsCardStylesTypes>({
     fontFamily: FONT.BOLD,
     fontSize: FONT_SIZE.TITLE,
     paddingHorizontal: PADDING,
-    paddingVertical: CONTAINER_PADDING,
+    paddingVertical: Platform.OS === 'android' ? 0 : CONTAINER_PADDING,
   },
 });
