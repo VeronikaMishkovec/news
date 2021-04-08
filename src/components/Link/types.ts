@@ -1,7 +1,7 @@
-import { TextStyle } from 'react-native';
+import { TextStyle, ViewStyle } from 'react-native';
 
 export type LinkStylesTypes = {
-  button: TextStyle;
+  button: ViewStyle;
   buttonText: TextStyle;
 };
 
