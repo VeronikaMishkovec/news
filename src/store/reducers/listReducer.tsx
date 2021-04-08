@@ -45,9 +45,10 @@ export const newsListReducer = (
     case 'LIST_REQUEST':
       return { ...state, loading: true };
     case 'LIST_SUCCESS':
+      console.log('rducer', action)
       return { ...state, loading: false, list: action.list };
-    case 'LIST_FAILED':
-      return { ...state, loading: false, error: action.error };
+    // case 'LIST_FAILED':
+    //   return { ...state, loading: false, error: action.error };
     default:
       return state;
   }

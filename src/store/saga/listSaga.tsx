@@ -26,14 +26,20 @@ import { getNewsList } from '../service';
 // }
 
 export default function* newsListSaga() {
-  yield takeEvery(action.newsListRequest, newsList);
+  yield takeEvery('LIST_REQUEST', newsList);
+  // yield takeEvery(action.newsListRequest, newsList);
 }
 
 function* newsList() {
   try {
     const payload: List[] = yield call(getNewsList);
+    
     console.log('payload', payload);
-    const res: NewsListActionType = yield put(action.newsListSuccess(payload));
+    //     const res: NewsListActionType = yield put({
+    //   type: 'LIST_SUCCESS',
+    //   list:payload.data.results,
+    // });
+    const res: NewsListActionType = yield put(action.newsListSuccess(payload.data.results));
     console.log('res', res);
     return res.payload.data;
   } catch (error) {

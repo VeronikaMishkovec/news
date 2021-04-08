@@ -13,8 +13,9 @@ export const NewsList = () => {
 
   useEffect(() => {
     dispatch(newsListRequest());
-    console.log(dispatch(newsListRequest()));
   }, []);
+
+  useEffect(()=>{console.log('news', newsList)},[newsList])
 
   return <NewsListView data={newsList} loading={loading} />;
 };

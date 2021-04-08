@@ -1,6 +1,6 @@
 // import { InitialStateType } from '../reducers/listReducer';
 
-import { RootType } from "../type";
+import { List, RootType } from "../type";
 
 // export const GET_NEWS_LIST = 'GET/NEWS_LIST';
 // export const SET_NEWS_LIST = 'SET/NEWS_LIST';

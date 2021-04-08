@@ -11,7 +11,7 @@ import { styles } from './styles';
 
 export const App = () => {
   useEffect(() => {
-    console.log('dsfcdcf')
+    // console.log('dsfcdcf')
 
     SplashScreen.hide();
   }, []);
