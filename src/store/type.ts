@@ -1,11 +1,8 @@
+export const GET_NEWS_LIST = 'GET/NEWS_LIST';
+export const SET_NEWS_LIST = 'SET/NEWS_LIST';
 export type NewsListActionType = {
   type: string;
-  payload: {
-    data: {
-      status: string,
-      results: List
-    }
-  };
+  payload: List;
 };
 
 export type List = {
