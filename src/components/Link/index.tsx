@@ -4,9 +4,9 @@ import { Alert, Linking } from 'react-native';
 import { LinkView } from './LinkView';
 import { LinkTypes } from './types';
 
-export const Link: FC<LinkTypes> = props => {
+export const Link: FC<LinkTypes> = (props) => {
   const { url } = props;
-  
+
   const handlePress = useCallback(async () => {
     const supported = await Linking.canOpenURL(url);
 
@@ -17,5 +17,5 @@ export const Link: FC<LinkTypes> = props => {
     }
   }, [url]);
 
-  return <LinkView handlePress={handlePress}>Read more</LinkView>;
+  return <LinkView handlePress={handlePress}>{'Read more'}</LinkView>;
 };

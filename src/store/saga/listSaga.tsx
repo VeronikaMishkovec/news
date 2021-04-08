@@ -11,8 +11,8 @@ function* newsList() {
       payload,
     });
     return res.payload.data;
-  } catch (e) {
-    console.log('Something goes wrong', e);
+  } catch (error) {
+    console.log('Something went wrong', error);
   }
 }
 

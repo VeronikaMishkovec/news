@@ -1,6 +1,8 @@
-import { StyleSheet } from 'react-native';
+import { Platform, StyleSheet } from 'react-native';
 import {
+  BORDER_RADIUS,
   COLOR,
+  CONTAINER_BOTTOM,
   CONTAINER_PADDING,
   FONT,
   FONT_SIZE,
@@ -10,12 +12,14 @@ import { NewsCardStylesTypes } from './types';
 
 export const styles = StyleSheet.create<NewsCardStylesTypes>({
   container: {
-    paddingBottom: CONTAINER_PADDING,
+    borderRadius: BORDER_RADIUS,
+    marginBottom: CONTAINER_BOTTOM,
+    backgroundColor: 'rgba(114, 162, 172, 0.1)',
   },
   image: {
     backgroundColor: COLOR.IMAGE,
     flex: 1,
-    height: 200,
+    height: 250,
     justifyContent: 'flex-end',
     resizeMode: 'cover',
   },

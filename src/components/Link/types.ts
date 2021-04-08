@@ -11,5 +11,5 @@ export type LinkTypes = {
 
 export type LinkViewTypes = {
   children: React.ReactNode;
-  handlePress: () => void;
+  handlePress(): void;
 };

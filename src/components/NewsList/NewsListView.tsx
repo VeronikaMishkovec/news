@@ -1,10 +1,17 @@
-import React, { FC, useEffect } from 'react';
-import { FlatList, ListRenderItem } from 'react-native';
+import React, { FC } from 'react';
+import {
+  ActivityIndicator,
+  FlatList,
+  ListRenderItem,
+  View,
+} from 'react-native';
+import { COLOR } from '../constants';
 import { NewsCard } from '../NewsCard';
+import { styles } from './styles';
 import { NewsListTypes, NewsListViewTypes } from './types';
 
-export const NewsListView: FC<NewsListViewTypes> = props => {
-  const { data } = props;
+export const NewsListView: FC<NewsListViewTypes> = (props) => {
+  const { data, loading } = props;
 
   const renderItems: ListRenderItem<NewsListTypes> = ({ item }) => {
     const media_data = item.media[0];
@@ -25,10 +32,19 @@ export const NewsListView: FC<NewsListViewTypes> = props => {
   };
 
   return (
-    <FlatList
-      data={data}
-      keyExtractor={item => item.id}
-      renderItem={renderItems}
-    />
+    <>
+      {loading ? (
+        <View style={styles.container}>
+          <ActivityIndicator size="large" color={COLOR.LOADING} />
+        </View>
+      ) : (
+        <FlatList
+          data={data}
+          keyExtractor={(item) => item.id}
+          renderItem={renderItems}
+          showsVerticalScrollIndicator={false}
+        />
+      )}
+    </>
   );
 };

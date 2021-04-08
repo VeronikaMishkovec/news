@@ -5,6 +5,7 @@ export const COLOR = {
   IMAGE: '#cb9573',
   LIGHT_TEXT: '#FFF',
   TEXT_BG: 'rgba(0, 0, 0, 0.4)',
+  LOADING: '#bf3f27'
 };
 
 export const CONTAINER_BOTTOM = 25;
