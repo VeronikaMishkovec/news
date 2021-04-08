@@ -10,7 +10,7 @@ import { NewsCard } from '../NewsCard';
 import { styles } from './styles';
 import { NewsListTypes, NewsListViewTypes } from './types';
 
-export const NewsListView: FC<NewsListViewTypes> = props => {
+export const NewsListView: FC<NewsListViewTypes> = (props) => {
   const { data, loading } = props;
 
   const renderItems: ListRenderItem<NewsListTypes> = ({ item }) => {
@@ -40,15 +40,11 @@ export const NewsListView: FC<NewsListViewTypes> = props => {
       ) : (
         <FlatList
           data={data}
-          keyExtractor={item => item.id}
+          keyExtractor={(item) => item.id}
           renderItem={renderItems}
           showsVerticalScrollIndicator={false}
         />
       )}
     </>
   );
-};
-
-const Line = () => {
-  return <View style={{ borderColor: '#bf3f27' }}></View>;
 };

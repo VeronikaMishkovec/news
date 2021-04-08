@@ -14,7 +14,7 @@ export const styles = StyleSheet.create<NewsCardStylesTypes>({
   container: {
     borderRadius: BORDER_RADIUS,
     marginBottom: CONTAINER_BOTTOM,
-    backgroundColor: 'rgba(114, 162, 172, 0.1)'
+    backgroundColor: 'rgba(114, 162, 172, 0.1)',
   },
   image: {
     backgroundColor: COLOR.IMAGE,
@@ -31,12 +31,12 @@ export const styles = StyleSheet.create<NewsCardStylesTypes>({
   subtitle: {
     fontFamily: FONT.REGULAR,
     fontSize: FONT_SIZE.TEXT,
-    marginBottom: Platform.OS === 'android' ? 0 : PADDING,
+    marginBottom: PADDING,
   },
   text: {
     color: COLOR.BTN,
     fontFamily: FONT.REGULAR,
-    marginBottom: Platform.OS === 'android' ? 0 : PADDING,
+    marginBottom: PADDING,
   },
   textContainer: {
     paddingHorizontal: PADDING,
@@ -49,6 +49,6 @@ export const styles = StyleSheet.create<NewsCardStylesTypes>({
     fontFamily: FONT.BOLD,
     fontSize: FONT_SIZE.TITLE,
     paddingHorizontal: PADDING,
-    paddingVertical: Platform.OS === 'android' ? 0 : CONTAINER_PADDING,
+    paddingVertical: CONTAINER_PADDING,
   },
 });

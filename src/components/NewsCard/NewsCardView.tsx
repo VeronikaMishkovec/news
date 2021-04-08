@@ -5,7 +5,7 @@ import { Link } from '../Link';
 import { styles } from './styles';
 import { NewsCardTypes } from './types';
 
-export const NewsCardView: FC<NewsCardTypes> = props => {
+export const NewsCardView: FC<NewsCardTypes> = (props) => {
   const { author, published_date, section, src, subtitle, title, url } = props;
 
   return (

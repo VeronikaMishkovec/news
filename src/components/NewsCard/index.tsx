@@ -4,7 +4,7 @@ import moment from 'moment';
 import { NewsCardTypes } from './types';
 import { NewsCardView } from './NewsCardView';
 
-export const NewsCard: FC<NewsCardTypes> = props => {
+export const NewsCard: FC<NewsCardTypes> = (props) => {
   const { author, published_date, section, src, subtitle, title, url } = props;
 
   const date = moment(published_date).format('DD.MM.YYYY');
@@ -12,7 +12,7 @@ export const NewsCard: FC<NewsCardTypes> = props => {
   return (
     <NewsCardView
       author={author}
-      published_date={date}
+      published_date={date} // fix
       section={section}
       src={src}
       subtitle={subtitle}

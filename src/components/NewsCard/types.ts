@@ -1,17 +1,18 @@
-import { TextStyle } from 'react-native';
+import { ImageStyle, TextStyle, ViewStyle } from 'react-native';
+import { List } from '../../store/type';
 
 export type NewsCardStylesTypes = {
-  container: TextStyle;
+  container: ViewStyle; //fix
   textContainer: TextStyle;
   title: TextStyle;
   subtitle: TextStyle;
   info: TextStyle;
   text: TextStyle;
-  image: TextStyle;
+  image: ImageStyle;
 };
 
 export type NewsCardTypes = {
-  title: string;
+  title: List['title'];
   subtitle: string;
   published_date: string;
   section: string;

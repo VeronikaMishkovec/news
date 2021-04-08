@@ -1,6 +1,8 @@
 import { GET_NEWS_LIST, SET_NEWS_LIST } from '../actions/action';
 import { List } from '../type';
 
+export type InitialStateType = typeof initialState
+
 const initialState = {
   list: [],
   loading: true,

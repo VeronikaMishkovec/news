@@ -4,8 +4,7 @@ import { AppStylesTypes } from './types';
 
 export const styles = StyleSheet.create<AppStylesTypes>({
   container: {
-    marginBottom: CONTAINER_BOTTOM,
+    flex: 1,
     marginHorizontal: CONTAINER_PADDING,
-    paddingBottom: Platform.OS === 'android' ? 50 : 0,
   },
 });
