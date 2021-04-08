@@ -2,11 +2,11 @@ import { ImageStyle, TextStyle, ViewStyle } from 'react-native';
 import { List } from '../../store/type';
 
 export type NewsCardStylesTypes = {
-  container: ViewStyle; //fix
-  textContainer: TextStyle;
+  container: ViewStyle;
+  textContainer: ViewStyle;
   title: TextStyle;
   subtitle: TextStyle;
-  info: TextStyle;
+  info: ViewStyle;
   text: TextStyle;
   image: ImageStyle;
 };

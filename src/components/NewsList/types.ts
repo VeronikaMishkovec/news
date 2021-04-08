@@ -1,4 +1,4 @@
-import { TextStyle } from "react-native";
+import { ViewStyle } from "react-native";
 
 export type NewsListTypes = {
   title: string;
@@ -16,7 +16,7 @@ export type NewsListTypes = {
 };
 
 export type NewsListStylesTypes = {
-  container: TextStyle
+  container: ViewStyle
 }
 
 export type NewsListViewTypes = {
