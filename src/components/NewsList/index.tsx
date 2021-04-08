@@ -1,6 +1,6 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { getNewsList } from '../../store/actions/action';
+import { newsListRequest } from '../../store/actions/action';
 
 import { NewsListView } from './NewsListView';
 import { RootState } from './types';
@@ -12,8 +12,9 @@ export const NewsList = () => {
   const loading = useSelector((state: RootState) => state.newsList.loading);
 
   useEffect(() => {
-    dispatch(getNewsList());
+    dispatch(newsListRequest());
+    console.log(dispatch(newsListRequest()));
   }, []);
 
-  return <NewsListView data={newsList} loading={loading}/>;
+  return <NewsListView data={newsList} loading={loading} />;
 };

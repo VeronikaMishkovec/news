@@ -1,5 +1,11 @@
 export const GET_NEWS_LIST = 'GET/NEWS_LIST';
 export const SET_NEWS_LIST = 'SET/NEWS_LIST';
+
+export type RootType = {
+  error: string
+  loading: boolean,
+}
+
 export type NewsListActionType = {
   type: string;
   payload: List;
