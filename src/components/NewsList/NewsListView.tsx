@@ -3,6 +3,7 @@ import {
   ActivityIndicator,
   FlatList,
   ListRenderItem,
+  SafeAreaView,
   View,
 } from 'react-native';
 import { COLOR } from '../constants';
@@ -32,9 +33,9 @@ export const NewsListView: FC<NewsListViewTypes> = (props) => {
   };
 
   return (
-    <>
+    <SafeAreaView style={styles.container}>
       {loading ? (
-        <View style={styles.container}>
+        <View style={styles.spinnerContainer}>
           <ActivityIndicator size="large" color={COLOR.LOADING} />
         </View>
       ) : (
@@ -45,6 +46,6 @@ export const NewsListView: FC<NewsListViewTypes> = (props) => {
           showsVerticalScrollIndicator={false}
         />
       )}
-    </>
+    </SafeAreaView>
   );
 };

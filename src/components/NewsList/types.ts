@@ -1,11 +1,11 @@
-import { ViewStyle } from "react-native";
-import { List, RootType } from "../../store/type";
+import { ViewStyle } from 'react-native';
+import { List, RootType } from '../../store/type';
 
 export type NewsListTypes = {
   abstract: List['abstract'];
   byline: List['byline'];
   id: List['id'];
-  media: List['media']
+  media: List['media'];
   published_date: List['published_date'];
   section: List['section'];
   title: List['title'];
@@ -13,8 +13,9 @@ export type NewsListTypes = {
 };
 
 export type NewsListStylesTypes = {
-  container: ViewStyle
-}
+  container: ViewStyle;
+  spinnerContainer: ViewStyle;
+};
 
 export type NewsListViewTypes = {
   data: NewsListTypes[];
