@@ -5,14 +5,14 @@ import { NewsCardTypes } from './types';
 import { NewsCardView } from './NewsCardView';
 
 export const NewsCard: FC<NewsCardTypes> = (props) => {
-  const { author, published_date, section, src, subtitle, title, url } = props;
+  const { author, date, section, src, subtitle, title, url } = props;
 
-  const date = moment(published_date).format('DD.MM.YYYY');
+  const formatDate = moment(date).format('DD.MM.YYYY');
 
   return (
     <NewsCardView
       author={author}
-      published_date={date} // fix
+      date={formatDate}
       section={section}
       src={src}
       subtitle={subtitle}

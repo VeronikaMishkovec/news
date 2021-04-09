@@ -21,7 +21,7 @@ export const NewsListView: FC<NewsListViewTypes> = (props) => {
     return (
       <NewsCard
         author={item.byline}
-        published_date={item.published_date}
+        date={item.published_date}
         section={item.section}
         src={newsImage}
         subtitle={item.abstract}

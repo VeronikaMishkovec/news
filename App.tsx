@@ -11,14 +11,12 @@ import { styles } from './styles';
 
 export const App = () => {
   useEffect(() => {
-    // console.log('dsfcdcf')
-
     SplashScreen.hide();
   }, []);
 
   return (
     <Provider store={store}>
-      <SafeAreaView  style={styles.container}>
+      <SafeAreaView style={styles.container}>
         <Header />
         <NewsList />
       </SafeAreaView>

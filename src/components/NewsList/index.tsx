@@ -15,7 +15,5 @@ export const NewsList = () => {
     dispatch(newsListRequest());
   }, []);
 
-  useEffect(()=>{console.log('news', newsList)},[newsList])
-
   return <NewsListView data={newsList} loading={loading} />;
 };
