@@ -1,23 +1,30 @@
-import { GET_NEWS_LIST, SET_NEWS_LIST } from '../actions/action';
-import { List } from '../type';
+import { NewsListActionType } from '../actions/action';
+import { ACTION_TYPE, List, RootType } from '../type';
 
-export type InitialStateType = typeof initialState
-
-const initialState = {
-  list: [],
-  loading: true,
+export type InitialStateType = {
+  error: RootType['error'];
+  list: List[];
+  loading: RootType['loading'];
 };
 
-export const newsList = (
+const initialState: InitialStateType = {
+  error: '',
+  list: [],
+  loading: false,
+};
+
+export const newsListReducer = (
   state = initialState,
-  action: { type: string; payload: List },
-) => {
+  action: NewsListActionType,
+): InitialStateType => {
   switch (action.type) {
-    case GET_NEWS_LIST:
-      return { ...state };
-    case SET_NEWS_LIST:
-      return { ...state, list: action.payload.data.results, loading: false };
+    case ACTION_TYPE.LIST_REQUEST:
+      return { ...state, loading: true };
+    case ACTION_TYPE.LIST_SUCCESS:
+      return { ...state, loading: false, list: action.list };
+    case ACTION_TYPE.LIST_FAILED:
+      return { ...state, loading: false, error: action.error };
     default:
-      return { ...state };
+      return state;
   }
 };

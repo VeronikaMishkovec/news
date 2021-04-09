@@ -1,4 +1,4 @@
 import { combineReducers } from 'redux';
-import { newsList } from '../reducers/listReducer';
+import { newsListReducer } from '../reducers/listReducer';
 
-export const rootReducer = combineReducers({ newsList });
+export const rootReducer = combineReducers({ newsList: newsListReducer });

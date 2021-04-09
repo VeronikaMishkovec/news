@@ -1,18 +1,15 @@
 import { ViewStyle } from "react-native";
+import { List, RootType } from "../../store/type";
 
 export type NewsListTypes = {
-  title: string;
-  abstract: string;
-  published_date: string;
-  section: string;
-  byline: string;
-  url: string;
-  media: [
-    {
-      'media-metadata': [{ url: string }, { url: string }, { url: string }];
-    },
-  ];
-  id: string;
+  abstract: List['abstract'];
+  byline: List['byline'];
+  id: List['id'];
+  media: List['media']
+  published_date: List['published_date'];
+  section: List['section'];
+  title: List['title'];
+  url: List['url'];
 };
 
 export type NewsListStylesTypes = {
@@ -21,12 +18,12 @@ export type NewsListStylesTypes = {
 
 export type NewsListViewTypes = {
   data: NewsListTypes[];
-  loading: boolean;
+  loading: RootType['loading'];
 };
 
 export type RootState = {
   newsList: {
-    list: [];
-    loading: boolean;
+    list: List[];
+    loading: RootType['loading'];
   };
 };

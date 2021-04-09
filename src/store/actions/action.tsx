@@ -1,16 +1,27 @@
-import { InitialStateType } from "../reducers/listReducer";
+import { ACTION_TYPE, List, RootType } from '../type';
 
-export const GET_NEWS_LIST = 'GET/NEWS_LIST';
-export const SET_NEWS_LIST = 'SET/NEWS_LIST';
+type ListFailedType = {
+  type: ACTION_TYPE.LIST_FAILED;
+  error: RootType['error'];
+};
+type ListRequestType = { type: ACTION_TYPE.LIST_REQUEST };
+type ListSuccessType = { type: ACTION_TYPE.LIST_SUCCESS; list: List[] };
 
-export const getNewsList = () => ({
-  type: GET_NEWS_LIST,
-});
+export type NewsListActionType =
+  | ListRequestType
+  | ListSuccessType
+  | ListFailedType;
 
-export const setNewsList = (list: {}, loading: InitialStateType['loading']) => {
-  return {
-    list,
-    loading,
-    type: SET_NEWS_LIST,
-  };
+export const newsListRequest = (): NewsListActionType => {
+  return { type: ACTION_TYPE.LIST_REQUEST };
+};
+
+export const newsListSuccess = (list: List[]): NewsListActionType => {
+  return { type: ACTION_TYPE.LIST_SUCCESS, list };
+};
+
+export const newsListFailed = (
+  error: RootType['error'],
+): NewsListActionType => {
+  return { type: ACTION_TYPE.LIST_FAILED, error };
 };

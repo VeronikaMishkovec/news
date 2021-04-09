@@ -16,7 +16,7 @@ export const App = () => {
 
   return (
     <Provider store={store}>
-      <SafeAreaView  style={styles.container}>
+      <SafeAreaView style={styles.container}>
         <Header />
         <NewsList />
       </SafeAreaView>
