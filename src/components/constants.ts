@@ -2,10 +2,11 @@ export const BORDER_RADIUS = 10;
 
 export const COLOR = {
   BTN: '#72a2ac',
+  BUTTON: '#3d6a66',
   IMAGE: '#cb9573',
   LIGHT_TEXT: '#FFF',
+  LOADING: '#bf3f27',
   TEXT_BG: 'rgba(0, 0, 0, 0.4)',
-  LOADING: '#bf3f27'
 };
 
 export const CONTAINER_BOTTOM = 25;
@@ -30,5 +31,7 @@ export const FONT_SIZE = {
 
 export const MARGINS = {
   HEADER: 15,
+  BTN_HOR: 15,
+  BTN_VER: 15,
 };
 export const PADDING = 10;

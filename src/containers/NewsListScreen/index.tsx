@@ -7,7 +7,7 @@ export const NewsListScreen: FC = ({ navigation }) => {
     <>
       <Button
         title="Go to Archive"
-        onPress={() => navigation.navigate('Details')}
+        onPress={() => navigation.navigate('Archive News')}
       />
       <NewsList />
     </>
