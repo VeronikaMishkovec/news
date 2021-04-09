@@ -1,37 +1,27 @@
-// import { InitialStateType } from '../reducers/listReducer';
+import { ACTION_TYPE, List, RootType } from '../type';
 
-import { List, RootType } from "../type";
-
-// export const GET_NEWS_LIST = 'GET/NEWS_LIST';
-// export const SET_NEWS_LIST = 'SET/NEWS_LIST';
-
-// export const getNewsList = () => ({
-//   type: GET_NEWS_LIST,
-// });
-
-// export const setNewsList = (list: {}) => {
-//   return {
-//     list,
-//     type: SET_NEWS_LIST,
-//   };
-// };
+type ListFailedType = {
+  type: ACTION_TYPE.LIST_FAILED;
+  error: RootType['error'];
+};
+type ListRequestType = { type: ACTION_TYPE.LIST_REQUEST };
+type ListSuccessType = { type: ACTION_TYPE.LIST_SUCCESS; list: List[] };
 
 export type NewsListActionType =
-  | { type: 'LIST_REQUEST' }
-  | { type: 'LIST_SUCCESS'; list: Object }
-  | { type: 'LIST_FAILED'; error: RootType['error'] };
+  | ListRequestType
+  | ListSuccessType
+  | ListFailedType;
 
 export const newsListRequest = (): NewsListActionType => {
-  console.log('request')
-  return { type: 'LIST_REQUEST' };
+  return { type: ACTION_TYPE.LIST_REQUEST };
 };
 
-export const newsListSuccess = (list: Object): NewsListActionType => {
-  console.log('success')
-  return { type: 'LIST_SUCCESS', list };
+export const newsListSuccess = (list: List[]): NewsListActionType => {
+  return { type: ACTION_TYPE.LIST_SUCCESS, list };
 };
 
-export const newsListFailed = (error: RootType['error']): NewsListActionType => {
-  console.log('failed')
-  return { type: 'LIST_FAILED', error };
+export const newsListFailed = (
+  error: RootType['error'],
+): NewsListActionType => {
+  return { type: ACTION_TYPE.LIST_FAILED, error };
 };

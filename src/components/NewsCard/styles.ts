@@ -44,7 +44,6 @@ export const styles = StyleSheet.create<NewsCardStylesTypes>({
   },
   title: {
     backgroundColor: COLOR.TEXT_BG,
-    borderStyle: 'solid',
     color: COLOR.LIGHT_TEXT,
     fontFamily: FONT.BOLD,
     fontSize: FONT_SIZE.TITLE,

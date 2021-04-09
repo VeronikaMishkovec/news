@@ -1,4 +1,5 @@
 import { TextStyle, ViewStyle } from 'react-native';
+import { List } from '../../store/type';
 
 export type LinkStylesTypes = {
   button: ViewStyle;
@@ -6,7 +7,7 @@ export type LinkStylesTypes = {
 };
 
 export type LinkTypes = {
-  url: string;
+  url: List['url'];
 };
 
 export type LinkViewTypes = {
