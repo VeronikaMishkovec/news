@@ -1,4 +1,5 @@
 import { ViewStyle } from 'react-native';
+import { NavParamsType } from '../../navigation/types';
 import { List, RootType } from '../../store/type';
 
 export type NewsListArrayTypes = {
@@ -23,8 +24,8 @@ export type NewsListViewTypes = {
 };
 
 export type NewsListType = {
-  category: string;
-  period: string;
+  category: NavParamsType['category'];
+  period: NavParamsType['period'];
 };
 
 export type RootState = {

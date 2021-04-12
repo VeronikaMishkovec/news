@@ -1,3 +1,4 @@
+import { NavParamsType } from '../../navigation/types';
 import { ACTION_TYPE, List, RootType } from '../type';
 
 type ListFailedType = {
@@ -6,8 +7,8 @@ type ListFailedType = {
 };
 export type ListRequestType = {
   type: ACTION_TYPE.LIST_REQUEST;
-  category: string;
-  period: string;
+  category: NavParamsType['category'];
+  period: NavParamsType['period'];
 };
 type ListSuccessType = { type: ACTION_TYPE.LIST_SUCCESS; list: List[] };
 
@@ -17,8 +18,8 @@ export type NewsListActionType =
   | ListFailedType;
 
 export const newsListRequest = (
-  category: string,
-  period: string,
+  category: NavParamsType['category'],
+  period: NavParamsType['period'],
 ): NewsListActionType => {
   return { type: ACTION_TYPE.LIST_REQUEST, category, period };
 };
