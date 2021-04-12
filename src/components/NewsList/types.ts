@@ -1,7 +1,7 @@
 import { ViewStyle } from 'react-native';
 import { List, RootType } from '../../store/type';
 
-export type NewsListTypes = {
+export type NewsListArrayTypes = {
   abstract: List['abstract'];
   byline: List['byline'];
   id: List['id'];
@@ -18,8 +18,13 @@ export type NewsListStylesTypes = {
 };
 
 export type NewsListViewTypes = {
-  data: NewsListTypes[];
+  data: NewsListArrayTypes[];
   loading: RootType['loading'];
+};
+
+export type NewsListType = {
+  category: string;
+  period: string;
 };
 
 export type RootState = {

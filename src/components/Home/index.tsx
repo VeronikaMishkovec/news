@@ -4,6 +4,6 @@ import { HomeView } from './HomeView';
 import { HomeViewTypes } from './types';
 
 export const Home: FC<HomeViewTypes> = (props) => {
-  const { onPress } = props;
-  return <HomeView onPress={onPress} />;
+  const { emailed, shared, viewed } = props;
+  return <HomeView emailed={emailed} shared={shared} viewed={viewed} />;
 };

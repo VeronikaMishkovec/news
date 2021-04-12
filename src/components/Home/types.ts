@@ -5,5 +5,7 @@ export type HomeStylesType = {
 };
 
 export type HomeViewTypes = {
-  onPress(): void;
+  emailed(): void;
+  shared(): void;
+  viewed(): void;
 };

@@ -5,13 +5,34 @@ import React, { FC } from 'react';
 import { Home } from '../../components/Home';
 import { RootStackParamList } from '../../navigation/types';
 
-type HomeScreenNavigationType = StackNavigationProp<RootStackParamList, 'Home'>
+type HomeScreenNavigationType = StackNavigationProp<RootStackParamList, 'Home'>;
 type Props = {
-  navigation: HomeScreenNavigationType
-}
+  navigation: HomeScreenNavigationType;
+};
 
 export const HomeScreen: FC<Props> = () => {
-  const navigation = useNavigation();
+  const navigation = useNavigation<HomeScreenNavigationType>();
 
-  return <Home onPress={() => navigation.navigate('News')} />;
+  return (
+    <Home
+      emailed={() =>
+        navigation.navigate('News', {
+          category: 'emailed',
+          period: '1',
+        })
+      }
+      viewed={() =>
+        navigation.navigate('News', {
+          category: 'viewed',
+          period: '1',
+        })
+      }
+      shared={() =>
+        navigation.navigate('News', {
+          category: 'viewed',
+          period: '1',
+        })
+      }
+    />
+  );
 };

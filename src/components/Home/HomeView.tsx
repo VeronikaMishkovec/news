@@ -7,12 +7,20 @@ import { styles } from './styles';
 import { HomeViewTypes } from './types';
 
 export const HomeView: FC<HomeViewTypes> = (props) => {
-  const { onPress } = props;
+  const { emailed, shared, viewed } = props;
   return (
     <SafeAreaView style={styles.container}>
       <Button
-        onPress={onPress}
-        title={'Most popular articles on NYTimes.com'}
+        onPress={emailed}
+        title={'The most emailed articles on NYTimes.com'}
+      />
+      <Button
+        onPress={viewed}
+        title={'The most viewed articles on NYTimes.com'}
+      />
+      <Button
+        onPress={shared}
+        title={'The most shared articles on NYTimes.com'}
       />
     </SafeAreaView>
   );

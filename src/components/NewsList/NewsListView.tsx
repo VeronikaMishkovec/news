@@ -9,12 +9,12 @@ import {
 import { COLOR } from '../constants';
 import { NewsCard } from '../NewsCard';
 import { styles } from './styles';
-import { NewsListTypes, NewsListViewTypes } from './types';
+import { NewsListArrayTypes, NewsListViewTypes } from './types';
 
 export const NewsListView: FC<NewsListViewTypes> = (props) => {
   const { data, loading } = props;
 
-  const renderItems: ListRenderItem<NewsListTypes> = ({ item }) => {
+  const renderItems: ListRenderItem<NewsListArrayTypes> = ({ item }) => {
     const media_data = item.media[0];
 
     const newsImage = media_data && media_data['media-metadata'][2].url;
