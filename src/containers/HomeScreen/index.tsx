@@ -18,7 +18,7 @@ export const HomeScreen: FC<Props> = () => {
       emailed={() =>
         navigation.navigate('News', {
           category: 'emailed',
-          period: '1',
+          period: '7',ы
         })
       }
       viewed={() =>
@@ -29,7 +29,7 @@ export const HomeScreen: FC<Props> = () => {
       }
       shared={() =>
         navigation.navigate('News', {
-          category: 'viewed',
+          category: 'shared',
           period: '1',
         })
       }

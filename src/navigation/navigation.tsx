@@ -4,7 +4,7 @@ import { NavigationContainer } from '@react-navigation/native';
 
 import { HomeScreen } from '../containers/HomeScreen';
 import { RootStackParamList } from './types';
-import { NewsListScreen } from '../containers/NewsListScreen';
+import { NewsNavigation } from '../containers/NewsListBottomBar';
 
 const RootStack = createStackNavigator<RootStackParamList>();
 
@@ -13,7 +13,7 @@ export const Navigation: FC = () => {
     <NavigationContainer >
       <RootStack.Navigator>
         <RootStack.Screen name="Home" component={HomeScreen} />
-        <RootStack.Screen name="News" component={NewsListScreen} />
+        <RootStack.Screen name="News" component={NewsNavigation} />
       </RootStack.Navigator>
     </NavigationContainer>
   );
