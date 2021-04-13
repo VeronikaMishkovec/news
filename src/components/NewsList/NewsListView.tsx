@@ -3,17 +3,18 @@ import {
   ActivityIndicator,
   FlatList,
   ListRenderItem,
+  SafeAreaView,
   View,
 } from 'react-native';
 import { COLOR } from '../constants';
 import { NewsCard } from '../NewsCard';
 import { styles } from './styles';
-import { NewsListTypes, NewsListViewTypes } from './types';
+import { NewsListArrayTypes, NewsListViewTypes } from './types';
 
 export const NewsListView: FC<NewsListViewTypes> = (props) => {
   const { data, loading } = props;
 
-  const renderItems: ListRenderItem<NewsListTypes> = ({ item }) => {
+  const renderItems: ListRenderItem<NewsListArrayTypes> = ({ item }) => {
     const media_data = item.media[0];
 
     const newsImage = media_data && media_data['media-metadata'][2].url;
@@ -32,9 +33,9 @@ export const NewsListView: FC<NewsListViewTypes> = (props) => {
   };
 
   return (
-    <>
+    <SafeAreaView style={styles.container}>
       {loading ? (
-        <View style={styles.container}>
+        <View style={styles.spinnerContainer}>
           <ActivityIndicator size="large" color={COLOR.LOADING} />
         </View>
       ) : (
@@ -45,6 +46,6 @@ export const NewsListView: FC<NewsListViewTypes> = (props) => {
           showsVerticalScrollIndicator={false}
         />
       )}
-    </>
+    </SafeAreaView>
   );
 };
