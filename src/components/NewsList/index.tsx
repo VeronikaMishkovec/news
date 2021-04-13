@@ -1,3 +1,4 @@
+import { useFocusEffect, useRoute } from '@react-navigation/core';
 import React, { FC, useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { newsListRequest } from '../../store/actions/action';
@@ -12,9 +13,12 @@ export const NewsList: FC<NewsListType> = (props) => {
   const newsList = useSelector((state: RootState) => state.newsList.list);
   const loading = useSelector((state: RootState) => state.newsList.loading);
 
-  useEffect(() => {
-    dispatch(newsListRequest(category, period));
-  }, []);
+  useFocusEffect(
+    React.useCallback(() => {
+      dispatch(newsListRequest(category, period));
+      return;
+    }, []),
+  );
 
   return <NewsListView data={newsList} loading={loading} />;
 };

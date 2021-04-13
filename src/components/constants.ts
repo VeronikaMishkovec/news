@@ -30,8 +30,25 @@ export const FONT_SIZE = {
 };
 
 export const MARGINS = {
-  HEADER: 15,
   BTN_HOR: 15,
   BTN_VER: 15,
+  HEADER: 15,
 };
 export const PADDING = 10;
+
+export enum SCREEN {
+  DAY = 'Day',
+  HOME = 'Home',
+  MONTH = 'Month',
+  NEWS = 'News',
+  WEEK = 'Week',
+}
+
+export enum PARAMS {
+  DAY = '1',
+  EMAILED = 'emailed',
+  MONTH = '30',
+  SHARED = 'shared',
+  VIEWED = 'viewed',
+  WEEK = '7',
+}
