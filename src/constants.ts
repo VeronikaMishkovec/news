@@ -29,6 +29,7 @@ export const FONT = {
 export const FONT_SIZE = {
   HEADER: 20,
   OPTION_INFO: 12,
+  SETTINGS_HEADER: 22,
   TEXT: 16,
   TITLE: 18,
 };

@@ -2,6 +2,7 @@ export enum ACTION_TYPE {
   LIST_FAILED = 'LIST_FAILED',
   LIST_REQUEST = 'LIST_REQUEST',
   LIST_SUCCESS = 'LIST_SUCCESS',
+  THEME = 'THEME'
 }
 
 export type RootType = {

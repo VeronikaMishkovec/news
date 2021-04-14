@@ -8,12 +8,10 @@ import { NewsNavigation } from '../screens/NewsListBottomBar';
 import { SCREEN } from '../constants';
 import { SettingScreen } from '../screens/SettingScreen';
 import { DarkTheme } from '../theme';
-import { ThemeTypes } from '../theme/type';
 
 const RootStack = createStackNavigator<RootStackParamList>();
 
 export const Navigation: FC = () => {
-  const { colors }: ThemeTypes = useTheme();
   return (
     <NavigationContainer theme={DarkTheme}>
       <RootStack.Navigator>
