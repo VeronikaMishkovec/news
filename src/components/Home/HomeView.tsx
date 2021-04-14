@@ -1,9 +1,10 @@
-import { useNavigation, useTheme } from '@react-navigation/native';
+import { useTheme } from '@react-navigation/native';
 import React, { FC } from 'react';
-import { SafeAreaView } from 'react-native';
+import { SafeAreaView, StatusBar } from 'react-native';
 import { ThemeTypes } from '../../theme/type';
 
 import { Button } from '../Button';
+import { Header } from '../Header';
 import { styles } from './styles';
 import { HomeViewTypes } from './types';
 
@@ -16,6 +17,8 @@ export const HomeView: FC<HomeViewTypes> = (props) => {
     <SafeAreaView
       style={{ ...styles.container, backgroundColor: colors.background }}
     >
+      <StatusBar barStyle={'light-content'} />
+      <Header title={'Main Screen'}/>
       <Button
         onPress={emailed}
         title={'The most emailed articles on NYTimes.com'}
