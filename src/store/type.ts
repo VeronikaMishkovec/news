@@ -7,6 +7,7 @@ export enum ACTION_TYPE {
 export type RootType = {
   error: string;
   loading: boolean;
+  onPress: void;
 };
 
 export type NewsListPayloadType = {

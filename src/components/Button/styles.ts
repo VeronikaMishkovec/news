@@ -12,6 +12,7 @@ import { ButtonStylesType } from './types';
 
 export const styles = StyleSheet.create<ButtonStylesType>({
   container: {
+    alignItems:'center',
     borderRadius: BORDER_RADIUS,
     borderWidth: 1,
     marginTop: MARGINS.BTN_HOR,

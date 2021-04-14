@@ -3,7 +3,7 @@ import { HeaderView } from './HeaderView';
 import { HeaderTypes } from './types';
 
 export const Header: FC<HeaderTypes> = (props) => {
-  const { title } = props;
+  const { back, title } = props;
   
-  return <HeaderView title={title} />;
+  return <HeaderView back={back} title={title}/>;
 };

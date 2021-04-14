@@ -17,5 +17,5 @@ export const Link: FC<LinkTypes> = (props) => {
     }
   }, [url]);
 
-  return <LinkView handlePress={handlePress}>{'Read more'}</LinkView>;
+  return <LinkView handlePress={handlePress} title={'Read More'}/>;
 };

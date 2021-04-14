@@ -1,4 +1,4 @@
-import { Platform, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 import {
   BORDER_RADIUS,
   COLOR,
@@ -14,10 +14,11 @@ export const styles = StyleSheet.create<NewsCardStylesTypes>({
   container: {
     borderRadius: BORDER_RADIUS,
     marginBottom: CONTAINER_BOTTOM,
-    backgroundColor: 'rgba(114, 162, 172, 0.1)',
   },
   image: {
     backgroundColor: COLOR.IMAGE,
+    borderTopLeftRadius: BORDER_RADIUS,
+    borderTopRightRadius: BORDER_RADIUS,
     flex: 1,
     height: 250,
     justifyContent: 'flex-end',
@@ -34,7 +35,6 @@ export const styles = StyleSheet.create<NewsCardStylesTypes>({
     marginBottom: PADDING,
   },
   text: {
-    color: COLOR.BTN,
     fontFamily: FONT.REGULAR,
     marginBottom: PADDING,
   },

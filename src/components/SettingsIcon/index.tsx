@@ -6,9 +6,7 @@ import { SettingIconView } from './SettingsView';
 export const SettingsIcon: FC = () => {
   const navigation = useNavigation();
 
-  const settings = () => {
-    navigation.navigate(SCREEN.SETTINGS);
-  };
-
-  return <SettingIconView toSettings={() => settings()} />;
+  const settings = () => navigation.navigate(SCREEN.SETTINGS);
+  
+  return <SettingIconView onPress={() => settings()} />;
 };
