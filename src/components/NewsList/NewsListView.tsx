@@ -1,3 +1,4 @@
+import { useTheme } from '@react-navigation/native';
 import React, { FC } from 'react';
 import {
   ActivityIndicator,
@@ -7,12 +8,15 @@ import {
   View,
 } from 'react-native';
 import { COLOR } from '../../constants';
+import { ThemeTypes } from '../../theme/type';
 import { NewsCard } from '../NewsCard';
 import { styles } from './styles';
 import { NewsListArrayTypes, NewsListViewTypes } from './types';
 
 export const NewsListView: FC<NewsListViewTypes> = (props) => {
   const { data, loading } = props;
+
+  const { colors }: ThemeTypes = useTheme();
 
   const renderItems: ListRenderItem<NewsListArrayTypes> = ({ item }) => {
     const media_data = item.media[0];
@@ -36,7 +40,7 @@ export const NewsListView: FC<NewsListViewTypes> = (props) => {
     <SafeAreaView style={styles.container}>
       {loading ? (
         <View style={styles.spinnerContainer}>
-          <ActivityIndicator size="large" color={COLOR.LOADING} />
+          <ActivityIndicator size="large" color={colors.text} />
         </View>
       ) : (
         <FlatList
