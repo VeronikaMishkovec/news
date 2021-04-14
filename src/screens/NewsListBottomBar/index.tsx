@@ -1,7 +1,7 @@
 import { createBottomTabNavigator } from '@react-navigation/bottom-tabs';
 import { RouteProp } from '@react-navigation/native';
 import React, { FC } from 'react';
-import { PARAMS, SCREEN } from '../../components/constants';
+import { PARAMS, SCREEN } from '../../constants';
 import { RootStackParamList } from '../../navigation/types';
 import { NewsListScreen } from '../NewsListScreen';
 import { Props } from './type';

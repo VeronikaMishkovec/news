@@ -1,6 +1,6 @@
 import { StyleSheet } from 'react-native';
 
-import { BORDER_RADIUS, COLOR, CONTAINER_PADDING, FONT, FONT_SIZE, MARGINS } from '../constants';
+import { BORDER_RADIUS, COLOR, CONTAINER_PADDING, FONT, FONT_SIZE, MARGINS } from '../../constants';
 import { ButtonStylesType } from './types';
 
 export const styles = StyleSheet.create<ButtonStylesType>({

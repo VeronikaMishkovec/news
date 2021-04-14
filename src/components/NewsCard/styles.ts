@@ -7,7 +7,7 @@ import {
   FONT,
   FONT_SIZE,
   PADDING,
-} from '../constants';
+} from '../../constants';
 import { NewsCardStylesTypes } from './types';
 
 export const styles = StyleSheet.create<NewsCardStylesTypes>({

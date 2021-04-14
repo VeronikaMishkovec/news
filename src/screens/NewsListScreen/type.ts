@@ -1,5 +1,5 @@
 import { RouteProp } from '@react-navigation/native';
-import { SCREEN } from '../../components/constants';
+import { SCREEN } from '../../constants';
 import { RootStackParamList } from '../../navigation/types';
 
 type NewsListScreenRouteProp = RouteProp<RootStackParamList, SCREEN.NEWS>;

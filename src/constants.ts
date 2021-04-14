@@ -3,6 +3,7 @@ export const BORDER_RADIUS = 10;
 export const COLOR = {
   BTN: '#72a2ac',
   BUTTON: '#3d6a66',
+  DARK_BACKGROUND: '#032e42',
   IMAGE: '#cb9573',
   LIGHT_TEXT: '#FFF',
   LOADING: '#bf3f27',

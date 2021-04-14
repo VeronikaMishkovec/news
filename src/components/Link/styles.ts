@@ -1,5 +1,5 @@
 import { Platform, StyleSheet } from 'react-native';
-import { COLOR, FONT, FONT_SIZE, BORDER_RADIUS, PADDING } from '../constants';
+import { COLOR, FONT, FONT_SIZE, BORDER_RADIUS, PADDING } from '../../constants';
 
 import { LinkStylesTypes } from './types';
 

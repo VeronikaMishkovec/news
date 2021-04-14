@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { CONTAINER_PADDING } from '../constants';
+import { CONTAINER_PADDING } from '../../constants';
 import { NewsListStylesTypes } from './types';
 
 export const styles = StyleSheet.create<NewsListStylesTypes>({

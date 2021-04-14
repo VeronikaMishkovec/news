@@ -1,5 +1,5 @@
 import { StackNavigationProp } from '@react-navigation/stack';
-import { SCREEN } from '../../components/constants';
+import { SCREEN } from '../../constants';
 import { RootStackParamList } from '../../navigation/types';
 
 export type HomeScreenNavigationType = StackNavigationProp<

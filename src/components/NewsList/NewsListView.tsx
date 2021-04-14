@@ -6,7 +6,7 @@ import {
   SafeAreaView,
   View,
 } from 'react-native';
-import { COLOR } from '../constants';
+import { COLOR } from '../../constants';
 import { NewsCard } from '../NewsCard';
 import { styles } from './styles';
 import { NewsListArrayTypes, NewsListViewTypes } from './types';

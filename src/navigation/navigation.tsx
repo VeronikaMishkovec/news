@@ -5,16 +5,17 @@ import { NavigationContainer, useNavigation } from '@react-navigation/native';
 import { HomeScreen } from '../screens/HomeScreen';
 import { RootStackParamList } from './types';
 import { NewsNavigation } from '../screens/NewsListBottomBar';
-import { SCREEN } from '../components/constants';
+import { SCREEN } from '../constants';
 import { SettingsIcon } from '../components/SettingsIcon';
 import { SettingScreen } from '../screens/SettingScreen';
+import { DarkTheme } from '../theme';
 
 const RootStack = createStackNavigator<RootStackParamList>();
 
 export const Navigation: FC = () => {
   // const navigation = useNavigation();
   return (
-    <NavigationContainer>
+    <NavigationContainer theme={DarkTheme}>
       <RootStack.Navigator>
         <RootStack.Screen
           name={SCREEN.HOME}

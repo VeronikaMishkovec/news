@@ -1,5 +1,5 @@
 import React, { FC } from 'react';
-import { PARAMS, SCREEN } from '../../components/constants';
+import { PARAMS, SCREEN } from '../../constants';
 
 import { Home } from '../../components/Home';
 import { NavParamsType } from '../../navigation/types';

@@ -1,6 +1,11 @@
 import React, { FC } from 'react';
-import { Text } from 'react-native';
+import { SafeAreaView, Text } from 'react-native';
+import { styles } from './style';
 
 export const SettingsView: FC = () => {
-  return <Text>{'Text'}</Text>;
+  return (
+    <SafeAreaView style={styles.container}>
+      <Text>{'Text'}</Text>
+    </SafeAreaView>
+  );
 };

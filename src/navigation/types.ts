@@ -1,5 +1,5 @@
 import { ViewStyle } from 'react-native';
-import { PARAMS } from '../components/constants';
+import { PARAMS } from '../constants';
 
 export type RootStackParamList = {
   Day: { category: string; period: PARAMS.DAY };
