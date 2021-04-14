@@ -1,11 +1,14 @@
+import { ViewStyle } from 'react-native';
 import { PARAMS } from '../components/constants';
 
 export type RootStackParamList = {
-  Home: undefined;
-  News: { category: string; period: string };
   Day: { category: string; period: PARAMS.DAY };
-  Week: { category: string; period: PARAMS.WEEK };
+  Home: undefined;
   Month: { category: string; period: PARAMS.MONTH };
+  News: { category: string; period: string };
+  Settings: undefined;
+  Week: { category: string; period: PARAMS.WEEK };
 };
 
 export type NavParamsType = { category: string; period: string };
+

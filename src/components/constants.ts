@@ -41,6 +41,7 @@ export enum SCREEN {
   HOME = 'Home',
   MONTH = 'Month',
   NEWS = 'News',
+  SETTINGS = 'Settings',
   WEEK = 'Week',
 }
 
