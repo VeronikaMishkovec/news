@@ -12,3 +12,14 @@ export const DarkTheme: ThemeTypes = {
     text: COLOR.DARK_TEXT,
   },
 };
+
+export const LightTheme: ThemeTypes = {
+  ...DefaultTheme,
+  dark: false,
+  colors: {
+    background: COLOR.LIGHT_BACKGROUND,
+    btnBackground: COLOR.LIGHT_BTN,
+    primary: COLOR.LIGHT_PRIMARY,
+    text: COLOR.LIGHT_TEXT,
+  },
+};

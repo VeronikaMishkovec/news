@@ -1,4 +1,4 @@
-import React, { FC } from 'react';
+import React, { FC, useEffect } from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer, useTheme } from '@react-navigation/native';
 
@@ -7,13 +7,17 @@ import { RootStackParamList } from './types';
 import { NewsNavigation } from '../screens/NewsListBottomBar';
 import { SCREEN } from '../constants';
 import { SettingScreen } from '../screens/SettingScreen';
-import { DarkTheme } from '../theme';
+import { DarkTheme, LightTheme } from '../theme';
+import { useSelector } from 'react-redux';
+import { RootState } from '../components/NewsList/types';
 
 const RootStack = createStackNavigator<RootStackParamList>();
 
 export const Navigation: FC = () => {
+  const theme = useSelector((state: RootState) => state.theme.payload);
+
   return (
-    <NavigationContainer theme={DarkTheme}>
+    <NavigationContainer theme={theme ? DarkTheme : LightTheme}>
       <RootStack.Navigator>
         <RootStack.Screen
           name={SCREEN.HOME}

@@ -33,4 +33,7 @@ export type RootState = {
     list: List[];
     loading: RootType['loading'];
   };
+  theme: {
+    payload: boolean;
+  };
 };

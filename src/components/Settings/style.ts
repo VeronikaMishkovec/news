@@ -1,8 +1,8 @@
 import { StyleSheet } from 'react-native';
 import { FONT, FONT_SIZE, MARGINS } from '../../constants';
-import { SettingsViewType } from './type';
+import { SettingsViewStylesType } from './type';
 
-export const styles = StyleSheet.create<SettingsViewType>({
+export const styles = StyleSheet.create<SettingsViewStylesType>({
   comment: {
     fontFamily: FONT.REGULAR,
     fontSize: FONT_SIZE.TITLE,

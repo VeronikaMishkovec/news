@@ -1,6 +1,6 @@
 import { ACTION_TYPE } from '../type';
 
-type ThemeActionType = {
+export type ThemeActionType = {
   type: ACTION_TYPE.THEME;
   payload: boolean;
 };

@@ -22,7 +22,6 @@ export const styles = StyleSheet.create<ButtonStylesType>({
     shadowRadius: 6,
   },
   text: {
-    color: COLOR.LIGHT_TEXT,
     fontFamily: FONT.MEDIUM,
     fontSize: FONT_SIZE.TEXT,
   },

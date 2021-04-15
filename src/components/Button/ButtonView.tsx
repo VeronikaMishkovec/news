@@ -19,7 +19,7 @@ export const ButtonView: FC<ButtonType> = (props) => {
         shadowColor: colors.primary,
       }}
     >
-      <Text style={styles.text}>{title}</Text>
+      <Text style={{...styles.text, color: colors.text}}>{title}</Text>
     </TouchableOpacity>
   );
 };
