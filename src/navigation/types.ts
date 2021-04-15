@@ -12,3 +12,6 @@ export type RootStackParamList = {
 
 export type NavParamsType = { category: string; period: string };
 
+export type NavigationTypes = {
+  theme: boolean;
+};

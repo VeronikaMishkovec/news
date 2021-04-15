@@ -3,7 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer, useTheme } from '@react-navigation/native';
 
 import { HomeScreen } from '../screens/HomeScreen';
-import { RootStackParamList } from './types';
+import { NavigationTypes, RootStackParamList } from './types';
 import { NewsNavigation } from '../screens/NewsListBottomBar';
 import { SCREEN } from '../constants';
 import { SettingScreen } from '../screens/SettingScreen';
