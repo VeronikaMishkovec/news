@@ -4,6 +4,7 @@ import { PARAMS } from '../constants';
 export type RootStackParamList = {
   Day: { category: string; period: PARAMS.DAY };
   Home: undefined;
+  Login: undefined;
   Month: { category: string; period: PARAMS.MONTH };
   News: { category: string; period: string };
   Settings: undefined;

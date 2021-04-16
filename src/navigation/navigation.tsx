@@ -3,7 +3,7 @@ import { createStackNavigator } from '@react-navigation/stack';
 import { NavigationContainer, useTheme } from '@react-navigation/native';
 
 import { HomeScreen } from '../screens/HomeScreen';
-import { NavigationTypes, RootStackParamList } from './types';
+import { RootStackParamList } from './types';
 import { NewsNavigation } from '../screens/NewsListBottomBar';
 import { SCREEN } from '../constants';
 import { SettingScreen } from '../screens/SettingScreen';
@@ -12,6 +12,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../components/NewsList/types';
 import AsyncStorage from '@react-native-async-storage/async-storage';
 import { themeAction } from '../store/actions/ThemeAction';
+import { LoginScreen } from '../screens/LoginScreen';
 
 const RootStack = createStackNavigator<RootStackParamList>();
 
@@ -29,6 +30,13 @@ export const Navigation: FC = () => {
   return (
     <NavigationContainer theme={theme ? DarkTheme : LightTheme}>
       <RootStack.Navigator>
+        <RootStack.Screen
+          name={SCREEN.LOGIN}
+          component={LoginScreen}
+          options={{
+            headerShown: false,
+          }}
+        />
         <RootStack.Screen
           name={SCREEN.HOME}
           component={HomeScreen}

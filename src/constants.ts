@@ -31,6 +31,7 @@ export const FONT = {
 
 export const FONT_SIZE = {
   HEADER: 20,
+  LOGIN: 30,
   OPTION_INFO: 12,
   SETTINGS_HEADER: 22,
   TEXT: 16,
@@ -41,12 +42,15 @@ export const MARGINS = {
   BTN_HOR: 15,
   BTN_VER: 15,
   HEADER: 15,
+  LOGIN: 30,
 };
 export const PADDING = 10;
+export const INNER_PADDING = 5;
 
 export enum SCREEN {
   DAY = 'Day',
   HOME = 'Home',
+  LOGIN = 'Login',
   MONTH = 'Month',
   NEWS = 'News',
   SETTINGS = 'Settings',

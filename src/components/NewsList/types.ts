@@ -36,4 +36,7 @@ export type RootState = {
   theme: {
     payload: boolean;
   };
+  user: {
+    payload: string;
+  };
 };
