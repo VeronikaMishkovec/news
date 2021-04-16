@@ -9,5 +9,5 @@ export type SettingsViewStylesType = {
 
 export type SettingsViewType = {
   theme: boolean;
-  toggleSwitch(): void;
+  toggleSwitch: (val: boolean) => void;
 };

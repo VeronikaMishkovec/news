@@ -8,13 +8,23 @@ import { NewsNavigation } from '../screens/NewsListBottomBar';
 import { SCREEN } from '../constants';
 import { SettingScreen } from '../screens/SettingScreen';
 import { DarkTheme, LightTheme } from '../theme';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { RootState } from '../components/NewsList/types';
+import AsyncStorage from '@react-native-async-storage/async-storage';
+import { themeAction } from '../store/actions/ThemeAction';
 
 const RootStack = createStackNavigator<RootStackParamList>();
 
 export const Navigation: FC = () => {
   const theme = useSelector((state: RootState) => state.theme.payload);
+  const dispatch = useDispatch();
+
+  useEffect(() => {
+    (async () => {
+      const saveTheme = await AsyncStorage.getItem('theme');
+      dispatch(themeAction(saveTheme === 'true' ? true : false));
+    })();
+  }, []);
 
   return (
     <NavigationContainer theme={theme ? DarkTheme : LightTheme}>

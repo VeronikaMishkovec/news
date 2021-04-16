@@ -21,7 +21,7 @@ export const SettingsView: FC<SettingsViewType> = (props) => {
         <Switch
           trackColor={{ false: COLOR.LIGHT_PRIMARY, true: COLOR.DARK_PRIMARY }}
           thumbColor={theme ? COLOR.DARK_BTN : COLOR.LIGHT_TEXT}
-          onValueChange={toggleSwitch}
+          onValueChange={(value) => toggleSwitch(value)}
           value={theme}
         />
       </View>
