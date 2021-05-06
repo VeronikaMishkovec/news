@@ -6,6 +6,7 @@ export type LoginViewStylesType = {
   container: ViewStyle;
   header: TextStyle;
   input: TextStyle;
+  inputContainer: ViewStyle;
   inputHeader: TextStyle;
   inputsWrapper: ViewStyle;
 };

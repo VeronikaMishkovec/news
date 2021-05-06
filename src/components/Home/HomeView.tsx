@@ -11,7 +11,7 @@ import { styles } from './styles';
 import { HomeViewTypes } from './types';
 
 export const HomeView: FC<HomeViewTypes> = (props) => {
-  const { emailed, shared, viewed } = props;
+  const { emailed, name, shared, viewed } = props;
 
   const { colors }: ThemeTypes = useTheme();
   const theme = useSelector((state: RootState) => state.theme.payload);
@@ -21,7 +21,7 @@ export const HomeView: FC<HomeViewTypes> = (props) => {
       style={{ ...styles.container, backgroundColor: colors.background }}
     >
       <StatusBar barStyle={theme ? 'light-content' : 'dark-content'} />
-      <Header back={false} title={'Main Screen'} />
+      <Header back={false} title={`Hello, ${name}`} />
       <Button
         onPress={emailed}
         title={'The most emailed articles on NYTimes.com'}

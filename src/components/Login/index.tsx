@@ -1,18 +1,25 @@
-import React, { FC, useEffect, useState } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useNavigation } from '@react-navigation/native';
+import React, { FC, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { SCREEN } from '../../constants';
 
 import { userAction } from '../../store/actions/UserAction';
-import { RootState } from '../NewsList/types';
 import { LoginView } from './LoginView';
 
 export const Login: FC = () => {
   const [name, setName] = useState('');
   const dispatch = useDispatch();
+  const navigation = useNavigation();
+
+  const toMainScreen = () => navigation.navigate(SCREEN.HOME);
 
   return (
     <LoginView
       onChangeText={(e: string) => setName(e)}
-      onPress={() => dispatch(userAction(name))}
+      onPress={() => {
+        dispatch(userAction(name));
+        toMainScreen();
+      }}
     />
   );
 };

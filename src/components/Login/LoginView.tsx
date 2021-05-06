@@ -2,6 +2,7 @@ import { useTheme } from '@react-navigation/native';
 import React, { FC } from 'react';
 import {
   SafeAreaView,
+  ScrollView,
   StatusBar,
   Text,
   TextInput,
@@ -30,21 +31,20 @@ export const LoginView: FC<LoginViewType> = (props) => {
   return (
     <SafeAreaView style={styles.container}>
       <StatusBar barStyle={theme ? 'light-content' : 'dark-content'} />
-      <Text style={{ ...styles.header, color: colors.primary }}>
-        {'Log in'}
-      </Text>
-      <View style={styles.inputsWrapper}>
-        <Text style={{ ...styles.inputHeader, color: colors.primary }}>
-          {'Username'}
-        </Text>
-        <TextInput
-          onChangeText={onChangeText}
-          style={{
-            ...styles.input,
-            ...themeColors,
-          }}
-        />
-        {/* <Text style={{ ...styles.inputHeader, color: colors.primary }}>
+      <ScrollView keyboardShouldPersistTaps="handled" scrollEnabled={false}>
+        <View style={styles.inputContainer}>
+          <Text style={{ ...styles.header, color: colors.primary }}>
+            {'Log in'}
+          </Text>
+          <View style={styles.inputsWrapper}>
+            <Text style={{ ...styles.inputHeader, color: colors.primary }}>
+              {'Username'}
+            </Text>
+            <TextInput
+              onChangeText={onChangeText}
+              style={{ ...styles.input, ...themeColors }}
+            />
+            {/* <Text style={{ ...styles.inputHeader, color: colors.primary }}>
           {'Password'}
         </Text>
         <TextInput
@@ -53,13 +53,15 @@ export const LoginView: FC<LoginViewType> = (props) => {
             ...themeColors,
           }}
         /> */}
-      </View>
-      <TouchableOpacity
-      onPress={onPress}
-        style={{ ...styles.button, backgroundColor: colors.primary }}
-      >
-        <Text style={{ ...styles.buttonText }}>{'Submit'}</Text>
-      </TouchableOpacity>
+          </View>
+          <TouchableOpacity
+            onPress={onPress}
+            style={{ ...styles.button, backgroundColor: colors.primary }}
+          >
+            <Text style={{ ...styles.buttonText }}>{'Submit'}</Text>
+          </TouchableOpacity>
+        </View>
+      </ScrollView>
     </SafeAreaView>
   );
 };

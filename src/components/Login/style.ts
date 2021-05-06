@@ -1,4 +1,4 @@
-import { StyleSheet } from 'react-native';
+import { Dimensions, StyleSheet } from 'react-native';
 import {
   BORDER_RADIUS,
   FONT,
@@ -15,7 +15,7 @@ export const styles = StyleSheet.create<LoginViewStylesType>({
     borderRadius: BORDER_RADIUS,
     justifyContent: 'center',
     width: 200,
-    marginTop: MARGINS.LOGIN
+    marginTop: MARGINS.LOGIN,
   },
   buttonText: {
     fontFamily: FONT.BOLD,
@@ -23,9 +23,7 @@ export const styles = StyleSheet.create<LoginViewStylesType>({
     padding: PADDING,
   },
   container: {
-    alignItems: 'center',
     flex: 1,
-    justifyContent: 'center',
   },
   header: {
     fontFamily: FONT.BLACK,
@@ -34,17 +32,21 @@ export const styles = StyleSheet.create<LoginViewStylesType>({
   input: {
     borderRadius: BORDER_RADIUS,
     borderWidth: 1,
-    fontFamily: FONT.REGULAR,
+    fontSize: FONT_SIZE.TEXT,
     padding: PADDING,
+  },
+  inputContainer: {
+    alignItems: 'center',
+    height: Dimensions.get('window').height,
+    justifyContent: 'center',
+    width: '100%',
   },
   inputHeader: {
     fontFamily: FONT.MEDIUM,
     fontSize: FONT_SIZE.TITLE,
-    marginVertical: MARGINS.HEADER,
   },
   inputsWrapper: {
     paddingHorizontal: MARGINS.BTN_HOR,
-    paddingVertical: MARGINS.BTN_VER,
     width: '100%',
   },
 });
