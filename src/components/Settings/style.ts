@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native';
-import { FONT, FONT_SIZE, MARGINS } from '../../constants';
+import { BORDER_RADIUS, FONT, FONT_SIZE, MARGINS, PADDING } from '../../constants';
 import { SettingsViewStylesType } from './type';
 
 export const styles = StyleSheet.create<SettingsViewStylesType>({
@@ -12,6 +12,18 @@ export const styles = StyleSheet.create<SettingsViewStylesType>({
     marginHorizontal: MARGINS.BTN_HOR,
     marginTop: MARGINS.BTN_VER,
   },
+  editNameContainer: {
+    alignItems: 'center',
+    flexDirection: 'row',
+  },
+  input: {
+    borderRadius: BORDER_RADIUS,
+    borderWidth: 1,
+    flexGrow: 1,
+    fontSize: FONT_SIZE.TEXT,
+    marginRight: PADDING,
+    padding: PADDING,
+  },
   switchContainer: {
     alignItems: 'center',
     flexDirection: 'row',
@@ -20,5 +32,10 @@ export const styles = StyleSheet.create<SettingsViewStylesType>({
   title: {
     fontFamily: FONT.BOLD,
     fontSize: FONT_SIZE.SETTINGS_HEADER,
+  },
+  userNameContainer: {
+    flexDirection: 'row',
+    alignItems: 'center',
+    justifyContent: 'space-between',
   },
 });

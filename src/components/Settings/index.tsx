@@ -9,6 +9,8 @@ import { SettingsView } from './SettingsView';
 
 export const Settings: FC = () => {
   const theme = useSelector((state: RootState) => state.theme.payload);
+  const userName = useSelector((state: RootState) => state.user.payload);
+
   const [isEnabled, setIsEnabled] = useState(theme);
   const dispatch = useDispatch();
 
@@ -18,5 +20,11 @@ export const Settings: FC = () => {
     AsyncStorage.setItem('theme', `${value}`);
   };
 
-  return <SettingsView theme={isEnabled} toggleSwitch={toggleSwitch} />;
+  return (
+    <SettingsView
+      theme={isEnabled}
+      toggleSwitch={toggleSwitch}
+      userName={userName}
+    />
+  );
 };

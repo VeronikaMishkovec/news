@@ -1,5 +1,6 @@
-import { useNavigation } from '@react-navigation/native';
-import React, { FC, useState } from 'react';
+import { useFocusEffect, useNavigation } from '@react-navigation/native';
+import React, { FC, useCallback, useEffect, useState } from 'react';
+import { BackHandler } from 'react-native';
 import { useDispatch } from 'react-redux';
 import { SCREEN } from '../../constants';
 
@@ -11,7 +12,9 @@ export const Login: FC = () => {
   const dispatch = useDispatch();
   const navigation = useNavigation();
 
-  const toMainScreen = () => navigation.navigate(SCREEN.HOME);
+  const toMainScreen = () => {
+    navigation.navigate(SCREEN.HOME);
+  };
 
   return (
     <LoginView

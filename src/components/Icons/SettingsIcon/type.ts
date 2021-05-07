@@ -1,5 +1,5 @@
 import { ViewStyle } from 'react-native';
-import { RootType } from '../../store/type';
+import { RootType } from '../../../store/type';
 
 export type NavigationStylesTypes = {
   settings: ViewStyle;

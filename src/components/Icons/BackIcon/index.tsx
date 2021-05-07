@@ -1,6 +1,6 @@
 import { useNavigation } from '@react-navigation/core';
 import React, { FC } from 'react';
-import { SCREEN } from '../../constants';
+import { SCREEN } from '../../../constants';
 import { BackIconView } from './BackIconView';
 
 export const BackIcon: FC = () => {

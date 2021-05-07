@@ -6,7 +6,8 @@ export type HomeStylesType = {
 
 export type HomeViewTypes = {
   emailed(): void;
-  name: string;
   shared(): void;
   viewed(): void;
+
+  name?: string;
 };

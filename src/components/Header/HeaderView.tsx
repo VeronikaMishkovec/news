@@ -2,8 +2,8 @@ import { useTheme } from '@react-navigation/native';
 import React, { FC } from 'react';
 import { Text, View } from 'react-native';
 import { ThemeTypes } from '../../theme/type';
-import { BackIcon } from '../BackIcon';
-import { SettingsIcon } from '../SettingsIcon';
+import { BackIcon } from '../Icons/BackIcon';
+import { SettingsIcon } from '../Icons/SettingsIcon';
 import { styles } from './styles';
 
 import { HeaderViewTypes } from './types';
