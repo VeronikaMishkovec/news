@@ -1,9 +1,8 @@
-import { Dimensions, StyleSheet } from 'react-native';
+import { StyleSheet } from 'react-native';
 import {
   BORDER_RADIUS,
   FONT,
   FONT_SIZE,
-  INNER_PADDING,
   MARGINS,
   PADDING,
 } from '../../constants';
@@ -37,7 +36,6 @@ export const styles = StyleSheet.create<LoginViewStylesType>({
   },
   inputContainer: {
     alignItems: 'center',
-    height: Dimensions.get('window').height,
     justifyContent: 'center',
     width: '100%',
   },

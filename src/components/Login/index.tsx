@@ -1,6 +1,5 @@
-import { useFocusEffect, useNavigation } from '@react-navigation/native';
-import React, { FC, useCallback, useEffect, useState } from 'react';
-import { BackHandler } from 'react-native';
+import { useNavigation } from '@react-navigation/native';
+import React, { FC, useState } from 'react';
 import { useDispatch } from 'react-redux';
 import { SCREEN } from '../../constants';
 
