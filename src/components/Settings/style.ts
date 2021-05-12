@@ -21,6 +21,7 @@ export const styles = StyleSheet.create<SettingsViewStylesType>({
     borderWidth: 1,
     flexGrow: 1,
     fontSize: FONT_SIZE.TEXT,
+    marginBottom:PADDING,
     marginRight: PADDING,
     padding: PADDING,
   },

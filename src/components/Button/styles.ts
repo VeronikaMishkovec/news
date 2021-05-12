@@ -2,11 +2,9 @@ import { StyleSheet } from 'react-native';
 
 import {
   BORDER_RADIUS,
-  COLOR,
-  CONTAINER_PADDING,
   FONT,
   FONT_SIZE,
-  MARGINS,
+  PADDING,
 } from '../../constants';
 import { ButtonStylesType } from './types';
 
@@ -15,7 +13,8 @@ export const styles = StyleSheet.create<ButtonStylesType>({
     alignItems:'center',
     borderRadius: BORDER_RADIUS,
     borderWidth: 1,
-    paddingHorizontal: CONTAINER_PADDING,
+    marginBottom: PADDING,
+    padding: PADDING,
     shadowOffset: { width: 0, height: 0 },
     shadowOpacity: 0.9,
     shadowRadius: 6,

@@ -8,5 +8,6 @@ export const styles = StyleSheet.create<HomeStylesType>({
   container: {
     flex: 1,
     marginHorizontal: MARGINS.BTN_HOR,
+    
   },
 });
